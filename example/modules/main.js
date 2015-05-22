@@ -10,7 +10,9 @@ React.renderComponent((
   <Routes location="history">
     <Route path="/" handler={App}>
       <DefaultRoute name="home" handler={Home} />
-      <Route name="about" handler={About} />
+    </Route>
+    <Route path="/about" handler={App}>
+      <DefaultRoute name="about" handler={About} />
     </Route>
   </Routes>
 ), document.body);
